@@ -20,7 +20,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
+import {
+  defineComponent, ref, computed, Ref,
+} from 'vue';
 import PersonForm from '@/components/PersonForm.vue';
 import CalculatedExpenses from '@/components/CalculatedExpenses.vue';
 
@@ -30,7 +32,7 @@ export default defineComponent({
     CalculatedExpenses,
   },
   setup() {
-    const expenses: Record<string, number>[] = ref([]);
+    const expenses: Ref = ref([]);
     const name = ref('');
 
     const addExpense = (event: { name: { value: string; }; expense: { value: number; }; }) => {
