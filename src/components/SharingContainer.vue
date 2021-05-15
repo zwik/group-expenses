@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import {
-  defineComponent, ref, computed, Ref,
+  defineComponent, ref, computed,
 } from 'vue';
 import PersonForm from '@/components/PersonForm.vue';
 import CalculatedExpenses from '@/components/CalculatedExpenses.vue';
@@ -32,7 +32,12 @@ export default defineComponent({
     CalculatedExpenses,
   },
   setup() {
-    const expenses: Ref = ref([]);
+    interface Expense {
+      name: string
+      expense: number
+    }
+
+    const expenses = ref<Expense[]>([]);
     const name = ref('');
 
     const addExpense = (event: { name: { value: string; }; expense: { value: number; }; }) => {
@@ -62,7 +67,7 @@ export default defineComponent({
 }
 
 .divider {
-  @apply divide-y-2;
+  @apply divide-y;
   @apply divide-black;
 }
 
