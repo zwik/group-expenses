@@ -57,12 +57,12 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const totalExpenses = computed(() => props.expenses.reduce((acc: any, curr: any) => acc + parseInt(curr.expense, 10), 0));
+    const totalExpenses = computed(() => props.expenses.reduce((acc: any, curr: any) => acc + parseFloat(curr.expense), 0));
 
-    const averageExpenses = computed(() => Math.round(props.expenses.reduce((acc: any, curr: any) => acc + parseInt(curr.expense, 10), 0) as number / props.expenses.length * 100) / 100);
+    const averageExpenses = computed(() => Math.round(props.expenses.reduce((acc: any, curr: any) => acc + parseFloat(curr.expense), 0) as number / props.expenses.length * 100) / 100);
 
     const difference = (expense: any) => {
-      return averageExpenses.value - parseInt(expense.expense);
+      return (averageExpenses.value - parseFloat(expense.expense)).toFixed(2);
     };
 
     return { totalExpenses, averageExpenses, difference };
