@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import SharingCaring from '@/components/SharingCaring.vue';
+import SharingCaring from '@/components/SharingContainer.vue';
 
 describe('SharingCaring.vue', () => {
   it('renders props.msg when passed', () => {
