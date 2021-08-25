@@ -31,7 +31,7 @@
     "@vue/test-utils": "^2.0.0-rc.12",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-vue": "^7.16.0",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
