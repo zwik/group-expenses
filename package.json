@@ -22,7 +22,7 @@
     "eslint-plugin-vue": "^10.3.0",
     "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
     "vite": "^7.0.6",
     "vitest": "^3.2.4",
